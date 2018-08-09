@@ -1,0 +1,45 @@
+{% extends "header.html" %}
+{% block title %}
+    <title>Staff</title>
+{% endblock %}
+
+{% block head %}
+        <h1>Staff</h1>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Job</th>
+        </tr>
+     {% for record in records %}
+         <tr>
+             <td>{{record.name}}</td>
+             <td>{{record.job }}</td>
+         </tr>
+     {% endfor %}
+    </table>
+    <br><br>
+        <div class="container">
+            <div class="page-header">
+            <h1>Attendance</h1>
+            </div>
+        </div>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Present</th>
+        </tr>
+     {% for record in records2 %}
+         <tr>
+             <td>{{record.date}}</td>
+             <td>{{record.staff.name}}</td>
+             <td>{{record.present }}</td>
+         </tr>
+     {% endfor %}
+    </table>
+{% endblock %}
+

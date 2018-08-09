@@ -1,0 +1,40 @@
+{% extends "header.html" %}
+{% block title %}
+    <title>Complaints</title>
+{% endblock %}
+
+    {% block head %}<h1>Complaints</h1>{% endblock %}
+{% block content %}
+    <table>
+        <tr>
+            <th>Complaint ID</th>
+            <th>Name</th>
+            <th>Details</th>
+            <th>Urgency Level</th>
+            <th>Status</th>
+
+        </tr>
+     {% for record in records %}
+         <tr>
+             <td>{{record.pk }}</td>
+             <td>{{record.name}}</td>
+             <td>{{record.details }}</td>
+             <td>{{record.urgency_level }}</td>
+             <td>
+                 {% if record.status %}
+                 Solved
+                 {% else %}
+                 TBS
+                 {% endif %}
+             </td>
+
+         </tr>
+     {% endfor %}
+    </table>
+    <br>
+    <div class="text-center">
+        <a href="/page/complaints/add/" class="btn btn-primary" role="link">Add Complaint</a>
+    </div>
+    <br>
+{% endblock %}
+

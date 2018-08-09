@@ -1,0 +1,25 @@
+{% extends "header.html" %}
+{% block title %}
+    <title>Notices</title>
+{% endblock %}
+
+{% block head %}<h1>Notices</h1>{% endblock %}
+{% block content %}
+    <table>
+        <tr>
+            <th>Notice ID</th>
+            <th>Name</th>
+            <th>Details</th>
+            <th>Urgency Level</th>
+        </tr>
+     {% for record in records %}
+         <tr>
+             <td>{{record.pk }}</td>
+             <td>{{record.name}}</td>
+             <td>{{record.details }}</td>
+             <td>{{record.urgency_level }}</td>
+         </tr>
+     {% endfor %}
+    </table>
+{% endblock %}
+

@@ -1,0 +1,19 @@
+{% extends "header.html" %}
+{% block title %}
+    <title>Add Complaints</title>
+{% endblock %}
+
+    {% block head %}<h1>Add Complaints</h1>{% endblock %}
+
+{% block content %}
+    <div class="add">
+        <form method="post" action="">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button class="btn btn-primary" type="submit">Add</button>
+                </div>
+        </form>
+    </div>
+{% endblock %}
+

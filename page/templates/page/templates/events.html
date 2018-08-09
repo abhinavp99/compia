@@ -1,0 +1,24 @@
+{% extends "header.html" %}
+{% block title %}
+    <title>Events</title>
+{% endblock %}
+
+    {% block head %}<h1>Events</h1>{% endblock %}
+{% block content %}
+    <table>
+        <tr>
+            <th>Event ID</th>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Budget</th>
+        </tr>
+     {% for record in records %}
+         <tr>
+             <td>{{record.pk }}</td>
+             <td>{{record.event_date}}</td>
+             <td>{{record.name}}</td>
+             <td>{{record.budget }}</td>
+         </tr>
+     {% endfor %}
+    </table>
+{% endblock %}

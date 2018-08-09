@@ -1,0 +1,51 @@
+.navbar {
+    padding: 20px;
+    font-family: "Arvo";
+    font-size: 20px;
+    background-color: azure;
+}
+
+.navbar .navbar-nav > li> a {
+    font-size: 20px;
+    color: black;
+
+}
+.navbar .navbar-header > a {
+    font-size: 20px;
+    color: black;
+}
+.btn-primary  > a {
+    margin-left: 50%;
+    text-align: center;
+
+}
+.navbar .navbar-toggle .icon-bar{
+    background-color: black;
+}
+.page-header{
+    font-family: "Arvo";
+    padding: 40px;
+}
+
+table, td, th {
+    border: 2px solid black;
+    font-family: "Arvo";
+    text-align: center;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 15%;
+}
+th {
+    padding: 15px;
+}
+td {
+    padding: 5px;
+}
+tr:hover{
+    background-color: ghostwhite;
+}
